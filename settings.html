@@ -1,0 +1,36 @@
+<script type="text/javascript">
+	$(function() {
+		$('#applicationID').val(APPLICATION_ID);
+		$('#restAPIKey').val(REST_API_KEY);
+		$('#masterKey').val(MASTER_KEY);
+	});
+</script>
+<form name="settings">
+	<div class="form-group">
+		<label for="restAPIKey">Application ID</label>
+		<div class="input-group">
+			<input type="text" class="form-control" id="applicationID" name="applicationID" placeholder="Application ID" />
+			<span class="input-group-btn">
+				<button class="btn btn-default btn-clear" type="button"><i class="fa fa-times"></i></button>
+			</span>
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="restAPIKey">REST API Key</label>
+		<div class="input-group">
+			<input type="text" class="form-control" id="restAPIKey" name="restAPIKey" placeholder="REST API Key" />
+			<span class="input-group-btn">
+				<button class="btn btn-default btn-clear" type="button"><i class="fa fa-times"></i></button>
+			</span>
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="restAPIKey">Master Key</label>
+		<div class="input-group">
+			<input type="text" class="form-control" id="masterKey" name="masterKey" placeholder="Master Key" />
+			<span class="input-group-btn">
+				<button class="btn btn-default btn-clear" type="button"><i class="fa fa-times"></i></button>
+			</span>
+		</div>
+	</div>
+</form>

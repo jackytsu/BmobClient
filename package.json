@@ -1,0 +1,35 @@
+{
+	"version": "1.0",
+	"main": "index.html",
+	"name": "BmobClient",
+	"description": "Bmob client for NW.js.",
+	"keywords": "bmob",
+	"repositories": {
+		"0": {
+			"type": "git",
+			"url": "https://github.com/jackytsu/BmobClient.git"
+		}
+	},
+	"window": {
+		"title": "BmobClient",
+		"show": true,
+		"frame": true,
+		"resizable": true,
+		"width": 800,
+		"height": 600,
+		"min_width": 800,
+		"min_height": 600,
+		"toolbar": true
+	},
+	"licenses": [{
+		"type": "MIT",
+		"url": "http://opensource.org/licenses/MIT"
+	}],
+	"maintainers": [{
+		"name": "JackyTsu",
+		"email": "jackytsu@vip.qq.com",
+		"web": "http://jackytsu.cn"
+	}],
+	"single-instance": true,
+	"no-edit-menu": true
+}

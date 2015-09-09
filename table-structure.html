@@ -1,0 +1,71 @@
+<script type="text/javascript" src="js/table-structure.js"></script>
+<div class="row">
+	<div class="col-sm-3">
+		<div class="btn-group" style="position: absolute; left: 10px;">
+			<a href="javascript: void(0);" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown"><i class="fa fa-gear"></i></a>
+			<ul class="dropdown-menu">
+				<li><a href="javascript: void(0);" id="btn-refresh-tables"><i class="fa fa-refresh"></i>&nbsp;刷新所有表结构</a></li>
+				<li><a href="javascript: void(0);" id="btn-create-table"><i class="fa fa-plus"></i>&nbsp;添加表</a></li>
+				<li><a href="javascript: void(0);" id="btn-export-tables"><i class="fa fa-cloud-download"></i>&nbsp;导出所有表结构</a></li>
+				<li><a href="javascript: void(0);" id="btn-import-tables"><i class="fa fa-cloud-upload"></i>&nbsp;导入所有表结构</a></li>
+			</ul>
+		</div>
+		<br />
+		<ul id="nav-tables" class="nav nav-pills nav-stacked table-structure-left-menu">
+		</ul>
+	</div>
+	<div class="col-sm-9 pull-right">
+		<div style="margin-left: -5px; display: none;">
+			<a href="javascript:void(0);" class="btn btn-default btn-xs" id="btn-append-field">添加字段</a>
+			<a href="javascript:void(0);" class="btn btn-default btn-xs" id="btn-delete-field">删除字段</a>
+			<a href="javascript:void(0);" class="btn btn-default btn-xs" id="btn-delete-table">删除表</a>
+			<a href="javascript:void(0);" class="btn btn-default btn-xs" id="btn-export-field">导出表结构</a>
+			<a href="javascript:void(0);" class="btn btn-default btn-xs" id="btn-import-field">导入表结构</a>
+		</div>
+		<div id="table-structure-fields" style="display: none;">
+			<table class="table table-bordered table-striped table-hover" style="margin-bottom: 0;">
+				<thead>
+					<tr>
+						<td align="center">
+							<label>
+								<input type="checkbox" id="cb-all" />
+							</label>
+						</td>
+						<td>字段名称</td>
+						<td>字段类型</td>
+						<td>关联类型</td>
+					</tr>
+				</thead>
+				<tbody></tbody>
+				<tfoot style="display: none;">
+					<tr>
+						<td colspan="4" align="right">
+							<button class="btn btn-primary" id="btn-field-save">保存</button>
+							<button class="btn btn-primary" id="btn-field-cancel">取消</button>
+						</td>
+					</tr>
+				</tfoot>
+			</table>
+		</div>
+	</div>
+</div>
+
+<div style="display: none;">
+	<div id="template-select-type">
+		<select name="type" class="form-control">
+			<option value="String">String</option>
+			<option value="Number">Number</option>
+			<option value="Boolean">Boolean</option>
+			<option value="Date">Date</option>
+			<option value="File">File</option>
+			<option value="Geopoint">Geopoint</option>
+			<option value="Array">Array</option>
+			<option value="Object">Object</option>
+			<option value="Pointer">Pointer</option>
+			<option value="Relation">Relation</option>
+		</select>
+	</div>
+	<div id="template-select-target-class">
+		<select name="targetClass" class="form-control"></select>
+	</div>
+</div>
