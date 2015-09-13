@@ -10,6 +10,7 @@
 				<li><a href="javascript: void(0);" id="btn-import-tables"><i class="fa fa-cloud-upload"></i>&nbsp;导入所有表结构</a></li>
 			</ul>
 		</div>
+		<i class="fa fa-refresh loading-icon pull-right" style="display: none;"></i>
 		<br />
 		<ul id="nav-tables" class="nav nav-pills nav-stacked table-structure-left-menu">
 		</ul>
@@ -17,35 +18,43 @@
 	<div class="col-sm-9 pull-right">
 		<div style="margin-left: -5px; display: none;">
 			<a href="javascript:void(0);" class="btn btn-default btn-xs" id="btn-append-field">添加字段</a>
-			<a href="javascript:void(0);" class="btn btn-default btn-xs" id="btn-delete-field">删除字段</a>
 			<a href="javascript:void(0);" class="btn btn-default btn-xs" id="btn-delete-table">删除表</a>
 			<a href="javascript:void(0);" class="btn btn-default btn-xs" id="btn-export-field">导出表结构</a>
 			<a href="javascript:void(0);" class="btn btn-default btn-xs" id="btn-import-field">导入表结构</a>
+			<i id="loading-icon-table-structure" class="fa fa-refresh loading-icon pull-right" style="display: none;"></i>
 		</div>
 		<div id="table-structure-fields" style="display: none;">
-			<table class="table table-bordered table-striped table-hover" style="margin-bottom: 0;">
-				<thead>
-					<tr>
-						<td align="center">
-							<label>
-								<input type="checkbox" id="cb-all" />
-							</label>
-						</td>
-						<td>字段名称</td>
-						<td>字段类型</td>
-						<td>关联类型</td>
-					</tr>
-				</thead>
-				<tbody></tbody>
-				<tfoot style="display: none;">
-					<tr>
-						<td colspan="4" align="right">
-							<button class="btn btn-primary" id="btn-field-save">保存</button>
-							<button class="btn btn-primary" id="btn-field-cancel">取消</button>
-						</td>
-					</tr>
-				</tfoot>
-			</table>
+			<form data-toggle="validator" role="form">
+				<div class="form-group has-feedback">
+					<label class="control-label" for="tableName">表名</label>
+					<input type="text" class="form-control" id="table-name" placeholder="表名" required>
+					<span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+					<div class="help-block with-errors"></div>
+				</div>
+				<table class="table table-bordered table-striped table-hover" style="margin-bottom: 0;">
+					<thead>
+						<tr>
+							<td align="center">
+								<label>
+									<input type="checkbox" id="cb-all" style="display: none;" />
+									<small>删除</small>
+								</label>
+							</td>
+							<td>字段名称</td>
+							<td>字段类型</td>
+							<td>关联类型</td>
+						</tr>
+					</thead>
+					<tbody></tbody>
+					<tfoot>
+						<tr>
+							<td colspan="4" align="right">
+								<button type="submit" class="btn btn-primary" id="btn-field-save">保存</button>
+							</td>
+						</tr>
+					</tfoot>
+				</table>
+			</form>
 		</div>
 	</div>
 </div>

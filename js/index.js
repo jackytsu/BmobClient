@@ -62,4 +62,8 @@ $(function() {
 	refreshNav();
 
 	$navTop.find('li:not(disabled):first a').click();
+
+	bootbox.setDefaults({
+		locale: 'zh_CN'
+	});
 });

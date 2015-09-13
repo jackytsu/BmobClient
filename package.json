@@ -1,5 +1,5 @@
 {
-	"version": "1.0",
+	"version": "0.3",
 	"main": "index.html",
 	"name": "BmobClient",
 	"description": "Bmob client for NW.js.",
